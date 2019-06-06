@@ -15,6 +15,9 @@ public class PerimeterCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        startStop.PlayStateFunc();
+        if(startStop.playState)
+        {
+            startStop.PlayStateFunc();
+        } 
     }
 }
