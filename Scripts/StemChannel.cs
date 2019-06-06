@@ -46,7 +46,7 @@ public class StemChannel : MonoBehaviour
         {
             //if mute button was pressed or stepping off solo'd stem, 
             //MUTE / REMUTE
-            if (!muteState || muteState && muteController.muteFlip)
+            if (!muteState || (muteState && muteController.muteFlip))
             {
                 muteState = true;
                 audioSource.volume = muteVolume;
